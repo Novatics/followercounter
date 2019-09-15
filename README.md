@@ -6,7 +6,7 @@
 
 You will be able to get your follower counter for the social medias:
 
-- [ ] Youtube
+- [x] Youtube
 - [ ] Twitter
 - [ ] Instagram
 
