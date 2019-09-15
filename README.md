@@ -23,9 +23,10 @@ pip install followercounter
 ```python
 from followercounter import youtube, instagram, twitter
 
-youtube.count('studiom4') # returns '205312'
-instagram.count('novatics_') # returns '1334'
-twitter.count('novatics') # returns '130'
+# Get your Youtube Key on https://console.developers.google.com on "Google Data Api v3"
+youtube('<YOUR__KEY>', 'studiom4') # returns '205312'
+instagram('novatics_') # returns '1334'
+twitter('novatics') # returns '130'
 ```
 
 ## Contributing
