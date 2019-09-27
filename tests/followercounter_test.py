@@ -11,12 +11,13 @@ def test_youtube_successfully(requests_mock):
 
   assert count == 21
 
-def test_instagram_successfully(requests_mock):
-  access_token = 'someAccessToken'
+def test_twittersuccessfully(requests_mock):
+  name = 'novatics'
+  key = 'somekey'
   
-  data = '{"data": {"id": "625224918", "username": "jeager13", "profile_picture": "https://scontent.cdninstagram.com/vp/83d10617aec58be7380a86b6fa5293f6/5E2C1C92/t51.2885-19/s150x150/20688256_108937706466040_7610686090076225536_a.jpg?_nc_ht=scontent.cdninstagram.com", "full_name": "Vinicius Franco", "bio": "you only live once.", "website": "", "is_business": false, "counts": {"media": 118, "follows": 653, "followed_by": 598}}, "meta": {"code": 200}}'
-  requests_mock.get("https://api.instagram.com/v1/users/self/?access_token=%s" %access_token, text=data)
+  data = '{ "id": 6253282, "id_str": "6253282", "name": "Twitter API", "screen_name": "TwitterAPI", "location": "San Francisco, CA", "followers_count": 6133636, "listed_count": 12936, "friends_count": 12 }'
+  requests_mock.get('https://api.twitter.com/1.1/users/show.json?Name='+name, text=data)
 
-  count = followercounter.instagram('someAccessToken')
+  count = followercounter.twitter(key, name)
 
-  assert count == 598
+  assert count == 6133636

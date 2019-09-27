@@ -33,6 +33,12 @@ twitter('novatics') # returns '130'
 
 To get the `access_token` first you need to register an application [here](https://www.instagram.com/developer/) and then follow the instructions [here](https://www.instagram.com/developer/authentication/) to authorize your application to access your profile data
 
+
+### Getting your access_token for Twitter
+
+To get the `access_token` first you need to create an application [here](https://developer.twitter.com/en/apps) and then follow the instructions [here](https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-users-show).
+
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
