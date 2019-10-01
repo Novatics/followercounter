@@ -1,6 +1,5 @@
 import requests
 import json
-from instagram.client import InstagramAPI
 
 def youtube(key, username):
   url = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername=%s&key=%s' %(username, key)
