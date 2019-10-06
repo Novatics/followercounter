@@ -25,7 +25,7 @@ from followercounter import youtube, instagram, twitter
 
 # Get your Youtube Key on https://console.developers.google.com on "Google Data Api v3"
 youtube('<YOUR__KEY>', 'studiom4') # returns '205312'
-instagram('novatics_') # returns '1334'
+instagram('<access_token>') # returns '1334'
 twitter('novatics') # returns '130'
 ```
 
@@ -42,6 +42,20 @@ To get the `access_token` first you need to create an application [here](https:/
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+### Setup environment
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Running tests
+
+```bash
+python -m pytest tests/
+```
 
 ## License
 
