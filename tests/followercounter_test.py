@@ -11,6 +11,17 @@ def test_youtube_successfully(requests_mock):
 
   assert count == 21
 
+def test_twitter_successfully(requests_mock):
+  name = 'novatics'
+  key = 'somekey'
+  
+  data = '{ "id": 6253282, "id_str": "6253282", "name": "Twitter API", "screen_name": "TwitterAPI", "location": "San Francisco, CA", "followers_count": 6133636, "listed_count": 12936, "friends_count": 12 }'
+  requests_mock.get('https://api.twitter.com/1.1/users/show.json?Name='+name, text=data)
+
+  count = followercounter.twitter(key, name)
+
+  assert count == 6133636
+
 def test_instagram_successfully(requests_mock):
   access_token = 'someAccessToken'
   
